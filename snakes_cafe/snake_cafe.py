@@ -1,7 +1,8 @@
+import sys
 #code from class demo
 def snakes():
     orders = {
-      'wings':0,
+    'wings':0,
     }
 
     print(orders)
@@ -11,12 +12,19 @@ def snakes():
     print(menu)
 
     
-    userInput = input("If you wanna QUIT input quit at anytime.").capitalize()
+    print("If you wanna quit input 'QUIT' at anytime.")
 
 # if userInput == "QUIT":
         
-
     user_input = input('What would you like to order?:  ')
+
+    while (user_input != 'QUIT'):
+        user_input = input('What would you like to order??: ')
+
+    if user_input.upper() == 'QUIT':
+        print('Goodbye')    
+        sys.exit()
+        
 
     print(user_input)
 
